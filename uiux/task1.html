@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup and Login Flow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Section -->
+        <div class="welcome">
+            <h2>Welcome</h2>
+            <p>Please login or sign up to continue using our app.</p>
+            <img src="illustration.png" alt="Illustration">
+            <div class="social-buttons">
+                <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+
+            </div>
+            <button class="main-btn" onclick="showSignup()">Sign up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <!-- Signup Section -->
+        <div class="signup hidden">
+            <h2>Sign Up</h2>
+            <p>Please register with email and sign up to continue using our app.</p>
+            <div class="social-buttons">
+                <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+                
+            </div>
+            <input type="email" placeholder="jhon.doe@gmail.com" id="signup-email">
+            <input type="password" placeholder="Password" id="signup-password">
+            <label><input type="checkbox" id="privacy-policy"> I agree with privacy policy</label>
+            <button class="main-btn" onclick="signup()">Sign up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <!-- Login Section -->
+        <div class="login hidden">
+            <h2>Login Now</h2>
+            <p>Please login to continue using our app.</p>
+            <div class="social-buttons">
+                <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+            </div>
+            <input type="email" placeholder="jhon.doe@gmail.com" id="login-email">
+            <input type="password" placeholder="Password" id="login-password">
+            <button class="main-btn" onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
